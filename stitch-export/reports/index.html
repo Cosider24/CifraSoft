@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script>
+    (function () {
+      var done = function () { document.documentElement.classList.add("icons-ready"); };
+      if (document.fonts && document.fonts.load) {
+        document.fonts.load('24px "Material Symbols Outlined"').then(done).catch(done);
+      } else {
+        done();
+      }
+      setTimeout(done, 1200);
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../common/stitch-theme.css"/>
+  <link rel="stylesheet" href="./styles.css"/>
+  <title>Отчеты</title>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <div class="brand">Цифра Софт</div>
+      <div class="nav-links">
+        <a href="../task-board/index.html">Задачи</a>
+        <a class="active" href="../reports/index.html">Отчеты</a>
+        <a href="../manager-dashboard/index.html">Дашборд</a>
+      </div>
+      <div class="nav-actions"><button class="icon-btn"><span class="material-symbols-outlined">notifications</span></button><button class="icon-btn"><span class="material-symbols-outlined">settings</span></button></div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <header class="page-header">
+      <div>
+        <h1>Отчеты по задачам</h1>
+        <p>Анализ производительности и мониторинг завершенных этапов разработки.</p>
+      </div>
+      <button class="period-btn"><span class="material-symbols-outlined">calendar_today</span>01 Окт 2023 — 31 Окт 2023</button>
+    </header>
+
+    <section class="stats">
+      <article><h3>Завершено задач</h3><strong>128</strong><small>+12%</small></article>
+      <article><h3>Среднее время</h3><strong>4.2 ч</strong><small>на одну задачу в этом месяце</small></article>
+      <article class="wide"><h3>Эффективность команды</h3><strong>94.8%</strong><small>Ваша команда работает на 5% быстрее, чем в прошлом квартале.</small></article>
+    </section>
+
+    <section class="report-table">
+      <div class="table-head">
+        <h2>Детализация выполненных работ</h2>
+        <button>Экспорт CSV</button>
+      </div>
+      <table>
+        <thead><tr><th>Название задачи</th><th>Исполнитель</th><th>Дата завершения</th><th>Время</th><th>Статус</th></tr></thead>
+        <tbody>
+          <tr><td>Редизайн модуля авторизации</td><td>Алексей Морозов</td><td>24 Окт 2023, 14:30</td><td>8ч 15м</td><td>check_circle</td></tr>
+          <tr><td>Оптимизация SQL-запросов API</td><td>Елена Котова</td><td>23 Окт 2023, 11:20</td><td>14ч 45м</td><td>check_circle</td></tr>
+          <tr><td>Интеграция платежного шлюза</td><td>Дмитрий Волков</td><td>22 Окт 2023, 18:05</td><td>22ч 30м</td><td>check_circle</td></tr>
+          <tr><td>Настройка CI/CD пайплайнов</td><td>Иван Соколов</td><td>21 Окт 2023, 09:15</td><td>5ч 50м</td><td>check_circle</td></tr>
+        </tbody>
+      </table>
+      <div class="table-footer">
+        <p>Итого за период: <b>548 часов</b></p>
+        <p>Активных сотрудников: <b>12 человек</b></p>
+        <p>Процент выработки: <b>104%</b></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+

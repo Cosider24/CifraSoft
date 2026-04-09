@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script>
+    (function () {
+      var done = function () { document.documentElement.classList.add("icons-ready"); };
+      if (document.fonts && document.fonts.load) {
+        document.fonts.load('24px "Material Symbols Outlined"').then(done).catch(done);
+      } else {
+        done();
+      }
+      setTimeout(done, 1200);
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../common/stitch-theme.css"/>
+  <link rel="stylesheet" href="./styles.css"/>
+  <title>Доска задач</title>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <div class="brand">Цифра Софт</div>
+      <div class="nav-links">
+        <a class="active" href="../task-board/index.html">Задачи</a>
+        <a href="../reports/index.html">Отчеты</a>
+        <a href="../manager-dashboard/index.html">Дашборд</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn"><span class="material-symbols-outlined">notifications</span></button>
+        <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <header class="page-header">
+      <div>
+        <h1>Задачи</h1>
+        <p>Управление потоком разработки и контроля качества</p>
+      </div>
+      <button class="primary-btn"><span class="material-symbols-outlined">add</span>Добавить задачу</button>
+    </header>
+
+    <section class="filters">
+      <div class="search-wrap">
+        <span class="material-symbols-outlined">search</span>
+        <input placeholder="Поиск по названию или ID..." type="text"/>
+      </div>
+      <div class="chips">
+        <button class="chip"><span class="material-symbols-outlined">filter_list</span>Статус</button>
+        <button class="chip"><span class="material-symbols-outlined">person_outline</span>Исполнитель</button>
+        <button class="chip"><span class="material-symbols-outlined">calendar_today</span>Срок</button>
+      </div>
+    </section>
+
+    <section class="kanban">
+      <div class="column">
+        <div class="column-head"><h3>Нужно сделать</h3><span>3</span></div>
+        <article class="task-card">
+          <small>Core API</small>
+          <h4>Архитектура модуля аутентификации</h4>
+          <p>Алексей М. · 12 Окт</p>
+        </article>
+        <article class="task-card">
+          <small>Design</small>
+          <h4>Ревью UI-кита версии 2.4</h4>
+          <p>Марина К. · Сегодня</p>
+        </article>
+      </div>
+
+      <div class="column">
+        <div class="column-head"><h3>В работе</h3><span>1</span></div>
+        <article class="task-card">
+          <small>Infrastructure</small>
+          <h4>Настройка CI/CD для продакшн контура</h4>
+          <div class="progress"><div></div></div>
+          <p>Дмитрий С. · 15 Окт</p>
+        </article>
+      </div>
+
+      <div class="column">
+        <div class="column-head"><h3>На проверке</h3><span>2</span></div>
+        <article class="task-card">
+          <small>Bugfix</small>
+          <h4>Исправление утечки памяти в WebSocket-сессии</h4>
+          <p>Сергей В. · 10 Окт</p>
+        </article>
+        <article class="task-card">
+          <small>UI Components</small>
+          <h4>Реализация темного режима для дашборда</h4>
+          <p>Марина К. · 08 Окт</p>
+        </article>
+      </div>
+
+      <div class="column done">
+        <div class="column-head"><h3>Готово</h3><span>12</span></div>
+        <article class="task-card">
+          <small>Closed 2h ago</small>
+          <h4>Миграция базы данных на PostgreSQL 15</h4>
+          <p>Дмитрий С.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+

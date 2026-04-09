@@ -1,0 +1,12 @@
+﻿* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, sans-serif; background: var(--background); color: var(--on-background); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+.home { min-height: 100vh; display: grid; place-content: center; gap: 2rem; }
+.hero h1 { margin: 0 0 .5rem; font-size: 3rem; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.03em; }
+.hero p { margin: 0; color: var(--on-surface-variant); }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.card { display: block; text-decoration: none; color: inherit; background: var(--surface-container-lowest); padding: 1.1rem; border-radius: .9rem; box-shadow: 0 12px 24px rgba(30,58,138,.06); border: 1px solid rgba(171,179,183,.2); transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 18px 28px rgba(30,58,138,.1); }
+.card h2 { margin: 0 0 .5rem; font-size: 1.2rem; font-family: "Space Grotesk", sans-serif; color: var(--primary); }
+.card p { margin: 0; color: var(--on-surface-variant); font-size: .92rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2.3rem; } }

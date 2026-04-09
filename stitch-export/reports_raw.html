@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#9f403d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#586064",
+                    "outline": "#737c7f",
+                    "tertiary-fixed-dim": "#3cd2eb",
+                    "surface-tint": "#0c56d0",
+                    "on-background": "#2b3437",
+                    "surface-dim": "#d1dce0",
+                    "on-primary-container": "#004ab9",
+                    "on-surface": "#2b3437",
+                    "surface-container-low": "#f1f4f6",
+                    "on-tertiary-fixed-variant": "#005763",
+                    "on-tertiary-fixed": "#003840",
+                    "surface-container-highest": "#dbe4e7",
+                    "background": "#f8f9fa",
+                    "secondary-fixed": "#cbe7f5",
+                    "on-primary-fixed": "#003993",
+                    "on-secondary": "#f2faff",
+                    "tertiary-container": "#50e1f9",
+                    "inverse-on-surface": "#9b9d9e",
+                    "secondary-fixed-dim": "#bdd9e6",
+                    "secondary": "#49636f",
+                    "surface-variant": "#dbe4e7",
+                    "surface-container": "#eaeff1",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#fff7f6",
+                    "inverse-surface": "#0c0f10",
+                    "tertiary-fixed": "#50e1f9",
+                    "surface": "#f8f9fa",
+                    "secondary-container": "#cbe7f5",
+                    "on-secondary-container": "#3c5561",
+                    "on-primary-fixed-variant": "#0253cd",
+                    "primary-fixed-dim": "#c6d3ff",
+                    "secondary-dim": "#3d5762",
+                    "primary-container": "#dae2ff",
+                    "on-error-container": "#752121",
+                    "surface-container-high": "#e3e9ec",
+                    "on-secondary-fixed-variant": "#455f6b",
+                    "on-tertiary": "#edfbff",
+                    "error-container": "#fe8983",
+                    "primary-dim": "#004aba",
+                    "tertiary-dim": "#005c68",
+                    "primary": "#0c56d0",
+                    "primary-fixed": "#dae2ff",
+                    "outline-variant": "#abb3b7",
+                    "error-dim": "#4e0309",
+                    "tertiary": "#006977",
+                    "on-tertiary-container": "#004d58",
+                    "inverse-primary": "#5c8bff",
+                    "on-secondary-fixed": "#29434e",
+                    "on-primary": "#f8f7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-xl shadow-blue-900/5">
+<div class="flex justify-between items-center px-8 h-16 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-blue-700 dark:text-blue-500">Цифра Софт</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Проекты</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Задачи</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 font-semibold transition-all duration-300" href="#">Отчеты</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Команда</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high ml-2 border-2 border-primary/10">
+<img alt="Аватар пользователя" data-alt="close-up portrait of a professional male developer with glasses in a minimalist office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt8B_Ru2WnKaGczRQNKAZd6TZ30bjJfoIgKwnlLgg5gX48Gvit1o0BAk1d3zJ5Z71GxgGC2oG6QZxFq-nrfcCLEq1MafUrUA1l8LAVFhln-BOHiv_F8KU8QGs1f0NEE0u8IlkUigQbnBBUUsQmWufsqyLFT1AxASz44EaU2Yjg77AjJwh_OpDUysc_UdNhR8oqaymyjq_5Wv_A-a9HndvqYBYXithqgJPy0KCuCI-FCwyNAHHSRcTMpo-CxgwoOmYc6caKJPQqrvua"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-8 max-w-[1440px] mx-auto">
+<!-- Header & Date Range Picker -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+<div>
+<h1 class="text-4xl font-bold text-on-surface mb-2">Отчеты по задачам</h1>
+<p class="text-on-surface-variant max-w-md">Анализ производительности и мониторинг завершенных этапов разработки.</p>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded-xl flex items-center gap-2 shadow-sm">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-lg text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+<span class="text-on-surface">01 Окт 2023 — 31 Окт 2023</span>
+</div>
+<button class="px-4 py-2 text-sm font-semibold text-primary hover:bg-primary-container/30 rounded-lg transition-colors">
+                    Изменить период
+                </button>
+</div>
+</header>
+<!-- Bento Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+<div class="md:col-span-1 bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:scale-[1.02] transition-transform">
+<p class="text-label text-on-surface-variant font-medium mb-1">Завершено задач</p>
+<div class="flex items-baseline gap-2">
+<h2 class="text-3xl font-bold text-primary">128</h2>
+<span class="text-xs font-bold text-green-600 bg-green-100 px-1.5 py-0.5 rounded">+12%</span>
+</div>
+<div class="mt-4 h-1 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:scale-[1.02] transition-transform border-l-4 border-tertiary-container">
+<p class="text-label text-on-surface-variant font-medium mb-1">Среднее время</p>
+<h2 class="text-3xl font-bold text-on-surface">4.2 ч</h2>
+<p class="text-xs text-on-surface-variant mt-2">на одну задачу в этом месяце</p>
+</div>
+<div class="md:col-span-2 bg-primary-container p-6 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-label text-on-primary-container font-medium mb-1">Эффективность команды</p>
+<h2 class="text-3xl font-bold text-on-primary-container">94.8%</h2>
+<p class="text-sm text-on-primary-container/80 mt-2 max-w-xs">Ваша команда работает на 5% быстрее, чем в прошлом квартале.</p>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+</div>
+</section>
+<!-- Main Report Table -->
+<section class="bg-surface-container-low rounded-xl overflow-hidden shadow-xl shadow-blue-900/5">
+<div class="p-6 bg-surface-container-lowest flex justify-between items-center">
+<h3 class="text-xl font-bold">Детализация выполненных работ</h3>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-low hover:bg-surface-container-high rounded-lg text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                        Фильтры
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-lg">download</span>
+                        Экспорт CSV
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-wider">
+<th class="px-8 py-4">Название задачи</th>
+<th class="px-8 py-4">Исполнитель</th>
+<th class="px-8 py-4">Дата завершения</th>
+<th class="px-8 py-4">Время на выполнение</th>
+<th class="px-8 py-4 text-right">Статус</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high bg-surface-container-lowest">
+<tr class="group hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors">Редизайн модуля авторизации</p>
+<p class="text-xs text-on-surface-variant">Проект: Личный кабинет</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px] font-bold text-blue-700">АМ</div>
+<span class="text-sm">Алексей Морозов</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">24 Окт 2023, 14:30</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium">8ч 15м</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined text-green-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors">Оптимизация SQL-запросов API</p>
+<p class="text-xs text-on-surface-variant">Проект: Core Engine</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-[10px] font-bold text-purple-700">ЕК</div>
+<span class="text-sm">Елена Котова</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">23 Окт 2023, 11:20</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium">14ч 45м</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined text-green-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors">Интеграция платежного шлюза</p>
+<p class="text-xs text-on-surface-variant">Проект: Billing System</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-[10px] font-bold text-orange-700">ДВ</div>
+<span class="text-sm">Дмитрий Волков</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">22 Окт 2023, 18:05</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium">22ч 30м</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined text-green-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<p class="font-semibold text-on-surface group-hover:text-primary transition-colors">Настройка CI/CD пайплайнов</p>
+<p class="text-xs text-on-surface-variant">Проект: DevOps Infrastructure</p>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center text-[10px] font-bold text-teal-700">ИС</div>
+<span class="text-sm">Иван Соколов</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">21 Окт 2023, 09:15</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-medium">5ч 50м</span>
+</td>
+<td class="px-8 py-5 text-right">
+<span class="material-symbols-outlined text-green-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Summary Stats Footer -->
+<div class="p-8 bg-surface-container-low flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex gap-12">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Итого за период</span>
+<span class="text-2xl font-bold text-primary">548 часов</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-12">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Активных сотрудников</span>
+<span class="text-2xl font-bold text-on-surface">12 человек</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-12">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Процент выработки</span>
+<span class="text-2xl font-bold text-green-600">104%</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="close up headshot of a female executive with dark hair, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbZzQPXfnzO2yX_ucBSCIHZ9d2qd3u4W9Q18_OZJzrwAWCUgUXl2jfa6X1sxd7y7Lh1QkgBSF9WmTdW8Ez9YQYYMtXxAj-IVieksM_kFxEee9oBoFPWdWtGxGk1GblvpTiOTN47kjLKbTcJlobZZacYU3HJxwyza5YyLXWsWgPls2bZSDvjcb8qwLuoq9mGaHpjKsJqiGUXYXVbVyr_JanNevip7hREOmG5agFhy8N6pb3faFflJeU0aQKCTgj_Ckelk86zwAKLQ6p"/>
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="close up headshot of a male software engineer with short hair and modern glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9BTAH7ht0z8Bma4dNDvaXsLT7lT_SF1KV1jWKwh8FoXNC6-CnvfKF619ymXe57-M-YPovHcbAQ-gw3JM2TnZkwyp15ECcU2_wiKevn6Euv2Tg70EV_TpXE_I6Ro49SDvRZ2naZ2qFyX2O1irh7hMeI3RYS1MeO1UFAV5HBiF0hcDtlyEx_na4F8LuGblweni02pt57eVOUn5UfxKMM3HJlhiK9Vy7QjurLBKtYUITgONi6m87szzV5rcRpYO6GZ4CsDZQ-cObMCS"/>
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="close up headshot of a female project manager with light brown hair in a business setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIHipHulo9AcLjzaHms-EWlsSzwSII_Y11Ic0RZasmbdguTvDoMnEh3xn_fU-5n7rYAOJHz0V83B3Zl25Bz5nY1l8ydSxKGG9KgG670HjEiTsYjqX-NIFxlKqPDykRWdvSK92MepkeF0RY5Z1o2FqWkIzVD5gXAYyVHNQruXJYc-pxsCihrl1OCSXT2sShir47XlIcMtJZ14QhCQjZi0keRd4m0djQA3ao29S_IDhC83PUS0VexxrNUIkoJf1Bw8xWKpgsWMBodQTi"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary text-on-primary flex items-center justify-center text-[10px] font-bold">+9</div>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Команда месяца</span>
+</div>
+</div>
+</section>
+<!-- Action Area -->
+<section class="mt-12 flex justify-center">
+<button class="px-12 py-4 bg-surface-container-high text-on-surface rounded-full font-bold hover:bg-surface-container-highest transition-all shadow-lg shadow-black/5 flex items-center gap-3 group">
+                Загрузить полную историю
+                <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">keyboard_arrow_down</span>
+</button>
+</section>
+</main>
+<!-- Visual Accent Element -->
+<div class="fixed bottom-0 right-0 p-12 pointer-events-none opacity-20">
+<div class="w-64 h-64 bg-primary blur-[120px] rounded-full"></div>
+</div>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#9f403d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#586064",
+                    "outline": "#737c7f",
+                    "tertiary-fixed-dim": "#3cd2eb",
+                    "surface-tint": "#0c56d0",
+                    "on-background": "#2b3437",
+                    "surface-dim": "#d1dce0",
+                    "on-primary-container": "#004ab9",
+                    "on-surface": "#2b3437",
+                    "surface-container-low": "#f1f4f6",
+                    "on-tertiary-fixed-variant": "#005763",
+                    "on-tertiary-fixed": "#003840",
+                    "surface-container-highest": "#dbe4e7",
+                    "background": "#f8f9fa",
+                    "secondary-fixed": "#cbe7f5",
+                    "on-primary-fixed": "#003993",
+                    "on-secondary": "#f2faff",
+                    "tertiary-container": "#50e1f9",
+                    "inverse-on-surface": "#9b9d9e",
+                    "secondary-fixed-dim": "#bdd9e6",
+                    "secondary": "#49636f",
+                    "surface-variant": "#dbe4e7",
+                    "surface-container": "#eaeff1",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#fff7f6",
+                    "inverse-surface": "#0c0f10",
+                    "tertiary-fixed": "#50e1f9",
+                    "surface": "#f8f9fa",
+                    "secondary-container": "#cbe7f5",
+                    "on-secondary-container": "#3c5561",
+                    "on-primary-fixed-variant": "#0253cd",
+                    "primary-fixed-dim": "#c6d3ff",
+                    "secondary-dim": "#3d5762",
+                    "primary-container": "#dae2ff",
+                    "on-error-container": "#752121",
+                    "surface-container-high": "#e3e9ec",
+                    "on-secondary-fixed-variant": "#455f6b",
+                    "on-tertiary": "#edfbff",
+                    "error-container": "#fe8983",
+                    "primary-dim": "#004aba",
+                    "tertiary-dim": "#005c68",
+                    "primary": "#0c56d0",
+                    "primary-fixed": "#dae2ff",
+                    "outline-variant": "#abb3b7",
+                    "error-dim": "#4e0309",
+                    "tertiary": "#006977",
+                    "on-tertiary-container": "#004d58",
+                    "inverse-primary": "#5c8bff",
+                    "on-secondary-fixed": "#29434e",
+                    "on-primary": "#f8f7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #2b3437; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar Execution -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-xl shadow-blue-900/5">
+<div class="flex justify-between items-center px-8 h-16 max-w-[1440px] mx-auto">
+<!-- Brand -->
+<div class="text-xl font-bold tracking-tighter text-blue-700 dark:text-blue-500 font-headline">
+                Цифра Софт
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Проекты</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 font-semibold transition-all duration-300" href="#">Задачи</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Отчеты</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-500 transition-all duration-300" href="#">Команда</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-500 hover:bg-blue-50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-blue-50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/15">
+<img alt="Аватар пользователя" class="w-full h-full object-cover" data-alt="professional portrait of a tech lead with glasses in a minimalist bright office setting soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3E7O5qpVutBz16y2K1948jBBwTCY791Z1PaG4Wz0Xs151V3aVRoHMHvkHECmLZWg9r44J4TR0zDjxhqhI5oLCcGyqtFPiv5gjifh2Hz0KJjvRdrQXOt7AL12H8Y8CXejlcbzhoEfmiFUY3t63_x3KWthq8WbBg5avVcRrHbyhGUwxNHWPJK7KtqMQZxZSQEnfhNO7srahRQdftwVntR-imdQROGUWkDmAvxcNf4KAmvEja07zv0WxjdQvgpFzNZOUrx3RfhqyJVX4"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 px-8 max-w-[1440px] mx-auto">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<h1 class="text-5xl font-headline font-bold tracking-tighter text-on-background mb-2">Задачи</h1>
+<p class="text-on-surface-variant text-sm font-medium">Управление потоком разработки и контроля качества</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg shadow-primary/10 active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-semibold text-sm">Добавить задачу</span>
+</button>
+</header>
+<!-- Filters Row -->
+<section class="mb-10 flex flex-wrap items-center gap-4">
+<!-- Search -->
+<div class="relative flex-grow max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-high border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all outline-none" placeholder="Поиск по названию или ID..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-high px-4 py-3 rounded-xl flex items-center gap-2 cursor-pointer hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline">filter_list</span>
+<span class="text-sm font-medium">Статус</span>
+</div>
+<div class="bg-surface-container-high px-4 py-3 rounded-xl flex items-center gap-2 cursor-pointer hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline">person_outline</span>
+<span class="text-sm font-medium">Исполнитель</span>
+</div>
+<div class="bg-surface-container-high px-4 py-3 rounded-xl flex items-center gap-2 cursor-pointer hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline">calendar_today</span>
+<span class="text-sm font-medium">Срок</span>
+</div>
+</div>
+<!-- Views Toggle -->
+<div class="ml-auto flex items-center p-1 bg-surface-container-low rounded-xl">
+<button class="p-2 bg-surface-container-lowest shadow-sm rounded-lg text-primary">
+<span class="material-symbols-outlined">view_kanban</span>
+</button>
+<button class="p-2 text-outline hover:text-on-surface transition-all">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+</button>
+</div>
+</section>
+<!-- Kanban Board -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+<!-- Column: To Do -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline font-bold text-sm uppercase tracking-wider text-on-surface-variant">Нужно сделать</h3>
+<span class="bg-surface-container-high text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+</div>
+<button class="text-outline hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-xl shadow-blue-900/5 hover:scale-[1.02] transition-all duration-300 group cursor-grab">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">Core API</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Архитектура модуля аутентификации</h4>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full border-2 border-white" data-alt="close up headshot of a professional developer with a friendly expression modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD44nUacmww0-yB-M--hrNabgk6yCi5MapFVJzxL43ZtWNc8Qi-7brA8L7Hei1VyQb6zCzqzveV87cf-Gq_W0KDiqvMzfZKX49Qba20Y2DxTRYok6lFpurrlORFx2mnehnnltD4wXuKYXleMAz-3Xt2XBuwKbga8Y4dEhHjKOg3RNWH8MgBJ2PuXIxzrBZECLQTeG2VZ05-Yy8BWU1SHuAW9PRZiePxsaa-UFNVaID997aY5Sf0SsUBLGflwnT9eCShUHeqgRw7Vbu"/>
+<span class="text-xs font-medium text-on-surface-variant">Алексей М.</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span class="text-[10px] font-semibold">12 Окт</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-xl shadow-blue-900/5 hover:scale-[1.02] transition-all duration-300 group cursor-grab">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded">Design</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Ревью UI-кита версии 2.4</h4>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full border-2 border-white" data-alt="creative professional woman smiling soft studio lighting high end tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgtkLrU2Rch8lhRQkkJjgCkkO1KEw_OHBrxTO3riA5mh7BHOduz2P13AuMGoSWqOaLOmtVVIvNmt7Revi9B3ioAMBTd8ZCiFChtRkIjyvg9CP4LBciQ3kFrtoQmSKSgifUgA2kVTu8qZGixEtN3wwwCtjcDx_YXNXi1YhK8aak3pM3eWFUr7R86od7vc6BehOm83WtWMukHLIkga3q66eY3ibjrnngy8hTdJnla4yAmPLY_WEzi55WPrBhlP9CORPFm0qgEAJixj9j"/>
+<span class="text-xs font-medium text-on-surface-variant">Марина К.</span>
+</div>
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span class="text-[10px] font-semibold">Сегодня</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: In Progress -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline font-bold text-sm uppercase tracking-wider text-on-surface-variant">В работе</h3>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-0.5 rounded-full">1</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-xl shadow-blue-900/5 hover:scale-[1.02] transition-all duration-300 group cursor-grab">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">Infrastructure</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Настройка CI/CD для продакшн контура</h4>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full mb-4 overflow-hidden">
+<div class="w-2/3 h-full bg-primary"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full border-2 border-white" data-alt="young male software engineer focused looking at screen blue lighting tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB89Z4FzbD4zct49FQ7WM-KPSlShUwBcGsmLy-x9LjNd1to7L6PGHU0DqrgU90aP43MY5PqMutoIe3oV4juPmLbMRq-wFTYctnh6AjimWNiQuoMIm1k6WDmrMqK0jZb7R0mOYP7z11iudFgqMjUirq6QgUDfagz-s4IPmilhVSrFoAnBiauYYAUW9Ek6uZW6cWf2EBmXKatnv6TcSjU5knZS3O2ZG45_MCm7fkYlNCboB6YnvIMCB8kWeK88hTuuUtyJ1Dy6KwmtQOg"/>
+<span class="text-xs font-medium text-on-surface-variant">Дмитрий С.</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span class="text-[10px] font-semibold">15 Окт</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Review -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline font-bold text-sm uppercase tracking-wider text-on-surface-variant">На проверке</h3>
+<span class="bg-surface-container-high text-xs font-bold px-2 py-0.5 rounded-full">2</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-xl shadow-blue-900/5 hover:scale-[1.02] transition-all duration-300 group cursor-grab">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-primary-container text-on-primary-container px-2 py-0.5 rounded">Bugfix</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Исправление утечки памяти в WebSocket-сессии</h4>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full border-2 border-white" data-alt="professional senior developer portrait calm focus minimal high-tech studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXds0Y9sARNPyDCmXCdM14wrANqHu0YcFcn4ZHkQpX9Qx274mrv67exYc7EBkNIFzXdS4hSWKMjw9URQFFKaVtukutVd3x18rqRj8mhrF6PyDumcIjhf5e_lW6Aw91pwiZGNvDehL8NvII79MtIL2cpgUqrFucOZhP1d2ed2KzHdR3ZsncSp0K3g2R9EKYLWcdTQIGmiVLjyqHdBTZHEvbOFzkvczL8GqUas9ScvcIh1OT3vWA5XRw6LWBHoNl5yzqL9JKdbxsr1SC"/>
+<span class="text-xs font-medium text-on-surface-variant">Сергей В.</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span class="text-[10px] font-semibold">10 Окт</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-xl shadow-blue-900/5 hover:scale-[1.02] transition-all duration-300 group cursor-grab">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] font-bold uppercase tracking-tighter bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded">UI Components</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors">Реализация темного режима для дашборда</h4>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full border-2 border-white" data-alt="creative professional woman smiling soft studio lighting high end tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3M4-MjplMoiO2LVTbLn0f48QJKjHz_RkDuB4Skay6BPVIlgO04hX2MLcYkDTi9BoqB7xtapj9lrhVBCxt9H0v5vrrp4HMRHxosKUVjcOiL_0EBzwC9yCOA5ckPVvgDpfIsEvVY6OwChc0LKewR5XIMBbomDrxInuQ5ksDjRzEGIKYC7gE6ssfUuwQciFOvR_DnCVyKPZFkuIIIgVnFCmpDE8J3zvqeKT3rV49Rs6Lj-wne9uwUyxxlnJ6tOHcvRHA-h-Om7vM5JnT"/>
+<span class="text-xs font-medium text-on-surface-variant">Марина К.</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span class="text-[10px] font-semibold">08 Окт</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: Done -->
+<div class="flex flex-col gap-4 opacity-60">
+<div class="flex items-center justify-between px-2 mb-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline font-bold text-sm uppercase tracking-wider text-on-surface-variant">Готово</h3>
+<span class="bg-surface-container-high text-xs font-bold px-2 py-0.5 rounded-full">12</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl border border-dashed border-outline-variant/30 group">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-outline">Closed 2h ago</span>
+</div>
+<h4 class="font-bold text-on-surface leading-tight mb-4 line-through decoration-outline">Миграция базы данных на PostgreSQL 15</h4>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Исполнитель" class="w-6 h-6 rounded-full grayscale opacity-50" data-alt="young male software engineer focused looking at screen blue lighting tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCwEnWAiwMg4zs_HbpmCvFtN4QoQFDFU-hjpOXpgze6e2LpUW_mVd_zV3ZYZAJUIAoN_cAtOwjepB6dLfkQ6C_GtxSmOwPMLTeu0CBmvtMyEZABEzbvv-f5B0LuZYP4_YOCGYloTuJSCYUKSavOaIPkmOv33LiR3f2TLA9TkK_zrQ8-XF59b3eSGzgmA_e3H_T6T8hbEmXDeHefIpjCgrYVWc8hg2UUMmNg2AHwv3LaTudklDmrv2jkQux4VEponG8dJmvghKFPf93"/>
+<span class="text-xs font-medium text-on-surface-variant">Дмитрий С.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl flex justify-around items-center h-20 px-4 border-t border-surface-container-high z-50">
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-semibold">Проекты</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span class="text-[10px] font-semibold">Задачи</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-semibold">Отчеты</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-semibold">Команда</span>
+</button>
+</div>
+</body></html>
